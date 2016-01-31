@@ -4,6 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var MongoClient = require('mongodb').MongoClient;
+var MongoStore = require('connect-mongo')(session);
+var flash = require('connect-flash');
+
 
 var routes = require('./routes/index');
 var PORT = process.env.PORT || 3000;
